@@ -60,14 +60,22 @@ import microsoft.exchange.webservices.data.misc.ITraceListener;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.http.auth.AuthSchemeProvider;
 import org.apache.http.client.AuthenticationStrategy;
 import org.apache.http.client.CookieStore;
+import org.apache.http.client.config.AuthSchemes;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.impl.auth.BasicSchemeFactory;
+import org.apache.http.impl.auth.DigestSchemeFactory;
+import org.apache.http.impl.auth.KerberosSchemeFactory;
+import org.apache.http.impl.auth.NTLMSchemeFactory;
+import org.apache.http.impl.auth.NTLMSchemeTSFactory;
+import org.apache.http.impl.auth.SPNegoSchemeFactory;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -235,6 +243,7 @@ public abstract class ExchangeServiceBase implements Closeable {
 
   protected HttpClientContext createHttpClientContext() {
 	HttpClientContext httpContext = HttpClientContext.create();
+	httpContext.setAuthSchemeRegistry(createAuthSchemeProviderRegistry());
     httpContext.setCookieStore(cookieStore);
     return httpContext;
   }
@@ -817,6 +826,8 @@ public abstract class ExchangeServiceBase implements Closeable {
 				AuthenticationStrategy authStrategy = new CookieProcessingTargetAuthenticationStrategy();
 			
 				httpClient = ret = HttpClients.custom()
+				  // GH-371
+				  .setDefaultAuthSchemeRegistry(createAuthSchemeProviderRegistry())
 				  .setConnectionManager(httpConnectionManager)
 				  .setTargetAuthenticationStrategy(authStrategy)
 				  .build();
@@ -839,6 +850,8 @@ public abstract class ExchangeServiceBase implements Closeable {
 				AuthenticationStrategy authStrategy = new CookieProcessingTargetAuthenticationStrategy();
 			
 				httpPoolingClient = ret = HttpClients.custom()
+				  // GH-371
+				  .setDefaultAuthSchemeRegistry(createAuthSchemeProviderRegistry())
 				  .setConnectionManager(poolingHttpConnectionManager)
 				  .setTargetAuthenticationStrategy(authStrategy)
 				  .build();
@@ -846,6 +859,21 @@ public abstract class ExchangeServiceBase implements Closeable {
 		}
 	}
 	return ret;
+  }
+  
+  /**
+   * Create own {@link AuthSchemeProvider} registry so we can use the {@link NTLMSchemeFactory} to fix GH-371
+   * @return
+   */
+  protected final Registry<AuthSchemeProvider> createAuthSchemeProviderRegistry() {
+	  return RegistryBuilder.<AuthSchemeProvider>create()
+      .register(AuthSchemes.BASIC, new BasicSchemeFactory())
+      .register(AuthSchemes.DIGEST, new DigestSchemeFactory())
+      // GH-371
+      .register(AuthSchemes.NTLM, new NTLMSchemeTSFactory())
+      .register(AuthSchemes.SPNEGO, new SPNegoSchemeFactory())
+      .register(AuthSchemes.KERBEROS, new KerberosSchemeFactory())
+      .build();	  
   }
 
   // Events
