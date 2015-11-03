@@ -72,14 +72,6 @@
         </developer>
     </developers>
 
-    <repositories>
-       <repository>
-          <id>netc-repo</id>
-          <name>netc repo</name>
-          <url>http://netcitadel-maven-repo.s3-website-us-west-2.amazonaws.com/vendors_repo/tools/m2</url>
-       </repository>
-    </repositories>
-
     <properties>
         <!-- Eliminates the file encoding warning. Of course, all of your files
             should probably be UTF-8 nowadays. -->
@@ -192,7 +184,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient-netc</artifactId>
+            <artifactId>httpclient</artifactId>
             <version>${httpclient.version}</version>
         </dependency>
 
