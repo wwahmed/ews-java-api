@@ -295,6 +295,80 @@
 
     <build>
         <plugins>
+
+            <!-- Shade Plugin for master jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <!-- Run shade goal on package phase -->
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+
+                            <relocations>
+
+                                <relocation>
+                                    <pattern>org.apache.commons.codec</pattern>
+                                    <shadedPattern>shaded.org.apache.commons.codec</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org.apache.commons.lang3</pattern>
+                                    <shadedPattern>shaded.org.apache.commons.lang3</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org.apache.commons.logging</pattern>
+                                    <shadedPattern>shaded.org.apache.commons.logging</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org.joda.time</pattern>
+                                    <shadedPattern>shaded.org.joda.time</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org.apache.http</pattern>
+                                    <shadedPattern>shaded.org.apache.http</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+
+                                <!--  For JSR 173 Implementation -->
+
+                                <relocation>
+                                    <pattern>com.sun.xml.stream</pattern>
+                                    <shadedPattern>shaded.com.sun.xml.stream</shadedPattern>
+                                    <excludes />
+                                </relocation>
+
+                                <!--  For JSR 173 API -->
+                                <relocation>
+                                    <pattern>javax.xml.stream</pattern>
+                                    <shadedPattern>shaded.javax.xml.stream</shadedPattern>
+                                    <excludes>
+                                    </excludes>
+                                </relocation>
+                            </relocations>
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Deployment / build plugins -->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
