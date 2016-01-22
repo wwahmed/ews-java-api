@@ -50,6 +50,7 @@ public abstract class XMLEventFactory {
   protected XMLEventFactory(){}
 
     static final String JAXPFACTORYID = "javax.xml.stream.XMLEventFactory";
+    // static final String DEFAULIMPL = "com.sun.xml.stream.events.ZephyrEventFactory";
     static final String DEFAULIMPL = "com.sun.xml.stream.events.ZephyrEventFactory";
 
 

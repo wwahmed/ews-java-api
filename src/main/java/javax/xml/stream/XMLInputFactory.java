@@ -140,6 +140,7 @@ public abstract class XMLInputFactory {
     "javax.xml.stream.allocator";
 
   static final String JAXPFACTORYID = "javax.xml.stream.XMLInputFactory";
+  // static final String DEFAULIMPL = "com.sun.xml.stream.ZephyrParserFactory";
   static final String DEFAULIMPL = "com.sun.xml.stream.ZephyrParserFactory";
 
   protected XMLInputFactory(){}

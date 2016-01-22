@@ -116,6 +116,7 @@ public abstract class XMLOutputFactory {
     "javax.xml.stream.isRepairingNamespaces";
 
   static final String JAXPFACTORYID = "javax.xml.stream.XMLOutputFactory";
+  // static final String DEFAULIMPL = "com.sun.xml.stream.ZephyrWriterFactory";
   static final String DEFAULIMPL = "com.sun.xml.stream.ZephyrWriterFactory";
 
   protected XMLOutputFactory(){}
