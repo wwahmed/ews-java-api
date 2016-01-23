@@ -124,6 +124,11 @@
                   <shadedPattern>shaded.javax.xml.ws</shadedPattern>
                   <excludes />
                 </relocation>
+                <relocation>
+                  <pattern>com.sun.naming.internal</pattern>
+                  <shadedPattern>shaded.com.sun.naming.internal</shadedPattern>
+                  <excludes />
+                </relocation>
               </relocations>
             </configuration>
           </execution>

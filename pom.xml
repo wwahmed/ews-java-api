@@ -394,6 +394,12 @@
 									<excludes/>
 								</relocation>
 							
+								<!--  this relocation only needed when autodiscovehandler was added for exchange url -->
+								<relocation>
+									<pattern>com.sun.naming.internal</pattern>
+									<shadedPattern>shaded.com.sun.naming.internal</shadedPattern>
+									<excludes/>
+								</relocation>
                                 
                             </relocations>
 
