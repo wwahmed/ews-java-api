@@ -291,6 +291,14 @@
             <scope>test</scope>
         </dependency>
 
+				
+		<!--  java.lang.verifyError on org.apache.log4j.Priority on Samsung Galaxy KitKat 4.4.4 Api level 19 -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
     </dependencies>
 
     <build>
@@ -362,6 +370,31 @@
                                     <excludes>
                                     </excludes>
                                 </relocation>
+                                
+                                								
+								<!--  javax.naming from jdk7/src -->
+								<relocation>
+									<pattern>javax.naming</pattern>
+									<shadedPattern>shaded.javax.naming</shadedPattern>
+									<excludes>
+									</excludes>
+								</relocation>
+								
+								<!--  Apache Log4j -->
+								<relocation>
+									<pattern>org.apache.log4j</pattern>
+									<shadedPattern>shaded.org.apache.log4j</shadedPattern>
+									<excludes/>
+								</relocation>
+								
+								<!-- javax.xml.ws.http.HttpException -->
+								<relocation>
+									<pattern>javax.xml.ws</pattern>
+									<shadedPattern>shaded.javax.xml.ws</shadedPattern>
+									<excludes/>
+								</relocation>
+							
+                                
                             </relocations>
 
                         </configuration>

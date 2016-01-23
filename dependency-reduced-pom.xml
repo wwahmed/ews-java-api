@@ -109,6 +109,21 @@
                   <shadedPattern>shaded.javax.xml.stream</shadedPattern>
                   <excludes />
                 </relocation>
+                <relocation>
+                  <pattern>javax.naming</pattern>
+                  <shadedPattern>shaded.javax.naming</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.log4j</pattern>
+                  <shadedPattern>shaded.org.apache.log4j</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.ws</pattern>
+                  <shadedPattern>shaded.javax.xml.ws</shadedPattern>
+                  <excludes />
+                </relocation>
               </relocations>
             </configuration>
           </execution>
