@@ -37,7 +37,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
-class EwsX509TrustManager implements X509TrustManager {
+public class EwsX509TrustManager implements X509TrustManager {
   /**
    * The Standard TrustManager.
    */
