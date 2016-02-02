@@ -3,6 +3,42 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/sun/xml/stream" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Binder.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ContextFinder.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/DataBindingException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/DatatypeConverter.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/DatatypeConverterImpl.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/DatatypeConverterInterface.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Element.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/GetPropertyAction.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXB.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXBContext.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXBElement.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXBException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXBIntrospector.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/JAXBPermission.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/MarshalException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Marshaller.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Messages.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/NotIdentifiableEvent.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ParseConversionEvent.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/PrintConversionEvent.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/PropertyException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/SchemaOutputResolver.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/TypeConstraintException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/UnmarshalException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Unmarshaller.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/UnmarshallerHandler.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ValidationEvent.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ValidationEventHandler.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ValidationEventLocator.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/ValidationException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/Validator.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/WhiteSpaceProcessor.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/annotation" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/attachment" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/helpers" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/bind/util" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/java/javax/xml/stream" charset="windows-1252" />
   </component>
 </project>

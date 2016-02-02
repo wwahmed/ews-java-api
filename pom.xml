@@ -400,7 +400,16 @@
 									<shadedPattern>shaded.com.sun.naming.internal</shadedPattern>
 									<excludes/>
 								</relocation>
-                                
+
+                                <!-- added on feb 1, 2015, in response to class not found on
+                                     javax.xml.bin.DataTypeConverte -->
+                                <!--  javax.naming from jdk7/src -->
+                                <relocation>
+                                    <pattern>javax.xml.bind</pattern>
+                                    <shadedPattern>shaded.javax.xml.bind</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
                             </relocations>
 
                         </configuration>
