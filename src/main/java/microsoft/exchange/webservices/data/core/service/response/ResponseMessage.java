@@ -137,6 +137,12 @@ public final class ResponseMessage extends ResponseObject<EmailMessage> {
         value);
   }
 
+  public void setIsReadReceiptRequested(boolean value) throws Exception
+  {
+    this.getPropertyBag().
+        setObjectFromPropertyDefinition(EmailMessageSchema.IsReadReceiptRequested, value);
+  }
+
   /**
    * Gets a list of recipients the response will be sent to.
    *

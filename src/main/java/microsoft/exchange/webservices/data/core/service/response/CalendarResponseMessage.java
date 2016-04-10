@@ -90,6 +90,12 @@ public abstract class CalendarResponseMessage<TMessage extends EmailMessage>
         value);
   }
 
+  public void setIsReadReceiptRequested(boolean value) throws Exception
+  {
+    this.getPropertyBag().
+        setObjectFromPropertyDefinition(EmailMessageSchema.IsReadReceiptRequested, value);
+  }
+
   /**
    * Gets a list of recipients the response will be sent to.
    *
