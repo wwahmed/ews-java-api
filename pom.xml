@@ -410,6 +410,56 @@
                                     <excludes/>
                                 </relocation>
 
+                                <!-- Added on April 10th, 2016. Trying to fix issue with recurring meeting
+                                adding by adding remaining all packages from javax.xml.* -->
+                                <relocation>
+                                    <pattern>javax.xml.crypto</pattern>
+                                    <shadedPattern>shaded.javax.xml.crypto</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.datatype</pattern>
+                                    <shadedPattern>shaded.javax.xml.datatype</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.namespace</pattern>
+                                    <shadedPattern>shaded.javax.xml.namespace</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.parsers</pattern>
+                                    <shadedPattern>shaded.javax.xml.parsers</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.soap</pattern>
+                                    <shadedPattern>shaded.javax.xml.soap</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.transform</pattern>
+                                    <shadedPattern>shaded.javax.xml.transform</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.validation</pattern>
+                                    <shadedPattern>shaded.javax.xml.validation</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>javax.xml.xpath</pattern>
+                                    <shadedPattern>shaded.javax.xml.xpath</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
                             </relocations>
 
                         </configuration>
