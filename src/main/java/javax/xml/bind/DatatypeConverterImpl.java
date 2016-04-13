@@ -904,7 +904,8 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
                     try {
                         df = DatatypeFactory.newInstance();
                     } catch (DatatypeConfigurationException e) {
-                        throw new Error(Messages.format(Messages.FAILED_TO_INITIALE_DATATYPE_FACTORY), e);
+//                        throw new Error(Messages.format(Messages.FAILED_TO_INITIALE_DATATYPE_FACTORY), e);
+                        throw new Error("WAQ Failed to initiate datatype factory: " + e.getMessage(), e);
                     }
                     DF_CACHE.put(tccl, df);
                 }
