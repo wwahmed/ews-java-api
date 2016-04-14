@@ -467,6 +467,12 @@
                                     <excludes/>
                                 </relocation>
 
+                                <relocation>
+                                    <pattern>javax.xml.XMLConstants</pattern>
+                                    <shadedPattern>shaded.javax.xml.XMLConstants</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
                                 <!-- Jaxp-ri Xerces -->
                                 <relocation>
                                     <pattern>com.sun.org.apache</pattern>
