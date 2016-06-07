@@ -475,8 +475,14 @@
 
                                 <!-- Jaxp-ri Xerces -->
                                 <relocation>
-                                    <pattern>com.sun.org.apache</pattern>
-                                    <shadedPattern>shaded.com.sun.org.apache</shadedPattern>
+                                    <pattern>com.sun</pattern>
+                                    <shadedPattern>shaded.com.sun</shadedPattern>
+                                    <excludes/>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org</pattern>
+                                    <shadedPattern>shaded.org</shadedPattern>
                                     <excludes/>
                                 </relocation>
 

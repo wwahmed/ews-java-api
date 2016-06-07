@@ -24,6 +24,7 @@
 package microsoft.exchange.webservices.data.core.service.response;
 
 import microsoft.exchange.webservices.data.attribute.EditorBrowsable;
+import microsoft.exchange.webservices.data.core.enumeration.property.Importance;
 import microsoft.exchange.webservices.data.core.service.item.EmailMessage;
 import microsoft.exchange.webservices.data.core.service.item.Item;
 import microsoft.exchange.webservices.data.core.service.schema.CalendarResponseObjectSchema;
@@ -100,6 +101,12 @@ public abstract class CalendarResponseMessage<TMessage extends EmailMessage>
   {
     this.getPropertyBag().
         setObjectFromPropertyDefinition(EmailMessageSchema.IsDeliveryReceiptRequested, value);
+  }
+
+  public void setImportance(Importance value) throws Exception
+  {
+    this.getPropertyBag().
+        setObjectFromPropertyDefinition(ItemSchema.Importance, value);
   }
 
   /**

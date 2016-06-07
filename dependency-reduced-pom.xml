@@ -4,7 +4,7 @@
   <groupId>com.microsoft.ews-java-api</groupId>
   <artifactId>ews-java-api</artifactId>
   <name>Exchange Web Services Java API</name>
-  <version>2.0</version>
+  <version>2.1</version>
   <description>Exchange Web Services (EWS) Java API</description>
   <url>http://www.microsoft.com/</url>
   <prerequisites>
@@ -127,6 +127,66 @@
                 <relocation>
                   <pattern>com.sun.naming.internal</pattern>
                   <shadedPattern>shaded.com.sun.naming.internal</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.bind</pattern>
+                  <shadedPattern>shaded.javax.xml.bind</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.crypto</pattern>
+                  <shadedPattern>shaded.javax.xml.crypto</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.datatype</pattern>
+                  <shadedPattern>shaded.javax.xml.datatype</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.namespace</pattern>
+                  <shadedPattern>shaded.javax.xml.namespace</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.parsers</pattern>
+                  <shadedPattern>shaded.javax.xml.parsers</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.soap</pattern>
+                  <shadedPattern>shaded.javax.xml.soap</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.transform</pattern>
+                  <shadedPattern>shaded.javax.xml.transform</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.validation</pattern>
+                  <shadedPattern>shaded.javax.xml.validation</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.xpath</pattern>
+                  <shadedPattern>shaded.javax.xml.xpath</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>javax.xml.XMLConstants</pattern>
+                  <shadedPattern>shaded.javax.xml.XMLConstants</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>com.sun</pattern>
+                  <shadedPattern>shaded.com.sun</shadedPattern>
+                  <excludes />
+                </relocation>
+                <relocation>
+                  <pattern>org</pattern>
+                  <shadedPattern>shaded.org</shadedPattern>
                   <excludes />
                 </relocation>
               </relocations>
